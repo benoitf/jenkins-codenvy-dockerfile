@@ -1,2 +1,2 @@
 FROM codenvy/ubuntu_jdk8 
-RUN mkdir -p /tmp && git clone https://github.com/jenkinsci/jenkins && cd jenkins && mvn clean install -pl war -am -DskipTests && rm -rf $HOME/.m2/repository/org/jenkins-ci/main && rm -rf /tmp/jenkins
+RUN cd /tmp && git clone https://github.com/jenkinsci/jenkins && cd jenkins && mvn clean install -pl war -am -DskipTests && rm -rf $HOME/.m2/repository/org/jenkins-ci/main && rm -rf /tmp/jenkins
